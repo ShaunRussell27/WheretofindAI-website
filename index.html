@@ -23,7 +23,7 @@
             </a>
             
             <nav class="nav-links">
-               <a href="#categories" class="nav-link">Explore</a>
+                <a href="#categories" class="nav-link">Explore</a>
                 <a href="price.html" class="nav-link">Pricing</a>
                 <a href="resources.html" class="nav-link">Resources</a>
             </nav>
@@ -51,6 +51,12 @@
     
     <!-- AI Websites Dropdown -->
     <div class="ai-selector">
+        <button class="ai-dropdown-toggle" id="aiDropdownToggle" aria-expanded="false" aria-haspopup="listbox">
+            <span>Browse AI Platforms</span>
+            <svg class="dropdown-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5z"/>
+            </svg>
+        </button>
 
         <ul class="ai-dropdown-menu" id="aiDropdownMenu" role="listbox" aria-hidden="true">
             <li role="option" data-website="OpenAI" data-desc="AI research and deployment." data-url="https://openai.com">
