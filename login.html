@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | AI Model Hub</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- AI Background Elements -->
+    <div class="ai-background">
+        <div class="circuit-lines"></div>
+        <div class="floating-ai-elements" id="aiElements"></div>
+    </div>
+
+    <!-- Header with Home Button -->
+    <div class="auth-header-container">
+    <form action="index.html" method="get">
+        <button type="submit" class="home-btn">
+            <span class="home-icon">←</span>
+            <span>Back to Home</span>
+        </button>
+    </form>
+    </div>
+
+
+    <!-- Login Container -->
+    <main class="auth-container">
+        <div class="auth-header">
+            <div class="auth-logo">
+                <div class="auth-logo-icon">AI</div>
+                <div class="auth-logo-text">ModelHub</div>
+            </div>
+            <h1 class="auth-title">Welcome Back</h1>
+            <p class="auth-subtitle">Sign in to access your AI models and tools</p>
+        </div>
+        
+        <form class="auth-form" novalidate>
+            <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                <div class="invalid-feedback">Please provide a valid email</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                    <button type="button" class="toggle-password" aria-label="Toggle password visibility">👁️</button>
+                </div>
+                <div class="invalid-feedback">Please enter your password</div>
+            </div>
+            
+            <div class="form-footer">
+                <label class="remember-me">
+                    <input type="checkbox" checked> Remember me
+                </label>
+                <a href="forgot.html" class="forgot-password">Forgot password?</a>
+            </div>
+            
+            <button type="submit" class="submit-btn">Sign In</button>
+            
+            <div class="divider">OR CONTINUE WITH</div>
+            
+            <div class="social-auth">
+                <button type="button" class="social-btn" id="googleSignIn">
+                    <span class="social-icon">🔍</span>
+                    <span>Google</span>
+                </button>
+                <button type="button" class="social-btn">
+                    <span class="social-icon">💼</span>
+                    <span>LinkedIn</span>
+                </button>
+                <button type="button" class="social-btn">
+                    <span class="social-icon">🐦</span>
+                    <span>Twitter</span>
+                </button>
+            </div>
+        </form>
+        
+        <div class="auth-footer">
+            Don't have an account? <a href="signup.html" class="auth-link">Sign up</a>
+        </div>
+    </main>
+    <script type="module" src="login.js"></script>
+</body>
+</html>

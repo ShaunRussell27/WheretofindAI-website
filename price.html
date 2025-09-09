@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI.com - Pricing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="price.css">
+</head>
+<body>
+    <!-- AI Background Elements -->
+    <div class="ai-bg">
+        <div class="circuit-overlay"></div>
+        <!-- Generated particles will be added here by JS -->
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12,2L1,12L4,12L4,21L10,21L10,15L14,15L14,21L20,21L20,12L23,12L12,2Z" />
+                </svg>
+            </div>
+            <a href="index.html" class="logo-text" style="text-decoration:none;">
+            <button style="background:none;border:none;padding:0;font:inherit;color:inherit;cursor:pointer;">
+                WhereToFindAI.com
+            </button>
+        </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+        </nav>
+        
+        <button class="cta-button">Try Free Demo</button>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>AI Solutions for Everyone</h1>
+        <p>Powering the future with intelligent solutions. Start at <a href="https://AI.com" class="ai-link">AI.com</a> today!</p>
+    </section>
+    
+    <!-- Pricing Cards -->
+    <div class="pricing-container">
+        <!-- Standard Card -->
+        <div class="pricing-card standard">
+            <h3>Standard</h3>
+            <div class="price">$19<span>/month</span></div>
+            <ul class="features">
+                <li>Basic AI Models</li>
+                <li>100 Requests/Month</li>
+                <li>Email Support</li>
+                <li>API Access (Limited)</li>
+            </ul>
+            <button class="card-button">Start with Standard</button>
+        </div>
+        
+        <!-- Pro Card -->
+        <div class="pricing-card pro">
+            <div class="popular-badge">Most Popular</div>
+            <h3>Pro</h3>
+            <div class="price">$49<span>/month</span></div>
+            <ul class="features">
+                <li>Advanced AI Models</li>
+                <li>1,000 Requests/Month</li>
+                <li>Priority Support</li>
+                <li>Full API Access + Plugins</li>
+            </ul>
+            <button class="card-button">Go Pro (Recommended)</button>
+        </div>
+        
+        <!-- Premium Card -->
+        <div class="pricing-card premium">
+            <h3>Premium</h3>
+            <div class="price">$99<span>/month</span></div>
+            <ul class="features">
+                <li>Enterprise-Grade AI</li>
+                <li>Unlimited Requests</li>
+                <li>24/7 Dedicated Support</li>
+                <li>Custom Model Training</li>
+            </ul>
+            <button class="card-button">Get Premium</button>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-cta">
+            <p>Need help choosing? Our AI assistant can recommend the perfect plan for your needs!</p>
+            <button class="chat-button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                Chat with our AI assistant
+            </button>
+        </div>
+        
+        <div class="footer-links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="https://AI.com">AI.com</a>
+        </div>
+        
+        <p class="copyright">© 2023 AI.com. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Create floating particles for AI background
+        document.addEventListener('DOMContentLoaded', function() {
+            const aiBg = document.querySelector('.ai-bg');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size between 2px and 6px
+                const size = Math.random() * 4 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100 + 100}%`;
+                
+                // Random animation duration and delay
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 10;
+                particle.style.animation = `float ${duration}s ${delay}s infinite linear`;
+                
+                aiBg.appendChild(particle);
+            }
+            
+            // Add pulse animation to Pro card
+            const proCard = document.querySelector('.pro');
+            setInterval(() => {
+                proCard.style.boxShadow = '0 0 20px 5px rgba(110, 72, 170, 0.6)';
+                setTimeout(() => {
+                    proCard.style.boxShadow = '0 15px 30px rgba(71, 118, 230, 0.2)';
+                }, 1000);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

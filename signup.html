@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <!-- Reuse your AI background elements -->
+    <div class="ai-background">
+        <div class="circuit-lines"></div>
+        <div class="floating-ai-elements" id="aiElements"></div>
+    </div>
+
+     <!-- Header with Home Button -->
+    <div class="auth-header-container">
+    <form action="index.html" method="get">
+        <button type="submit" class="home-btn">
+            <span class="home-icon">←</span>
+            <span>Back to Home</span>
+        </button>
+    </form>
+    </div>
+    
+    <!-- Sign Up Container -->
+    <main class="auth-container">
+        <div class="auth-header">
+            <div class="auth-logo">
+                <div class="auth-logo-icon">AI</div>
+                <div class="auth-logo-text">ModelHub</div>
+            </div>
+            <h1 class="auth-title">Create Your Account</h1>
+            <p class="auth-subtitle">Join thousands of creators and innovators using AI</p>
+        </div>
+        
+        <form class="auth-form" id="signupForm" novalidate>
+            <div class="form-group">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                <div class="invalid-feedback">Please provide your full name</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                <div class="invalid-feedback">Please provide a valid email</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" class="form-control" placeholder="Create a password" required minlength="8">
+                    <button type="button" class="toggle-password" aria-label="Toggle password visibility">👁️</button>
+                </div>
+                <div class="invalid-feedback">Password must be at least 8 characters</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm your password" required>
+                    <button type="button" class="toggle-password" aria-label="Toggle password visibility">👁️</button>
+                </div>
+                <div class="invalid-feedback">Passwords must match</div>
+            </div>
+            
+            <div class="form-footer">
+                <label class="remember-me">
+                    <input type="checkbox" checked> I agree to the <a href="#" style="color: var(--primary);">Terms</a>
+                </label>
+            </div>
+            
+            <button type="submit" class="submit-btn">Create Account</button>
+            
+            <div class="divider">OR CONTINUE WITH</div>
+            
+            <div class="social-auth">
+                <button type="button" class="social-btn" id="googleSignUp">
+                    <span class="social-icon">🔍</span>
+                    <span>Google</span>
+                </button>
+                <button type="button" class="social-btn">
+                    <span class="social-icon">💼</span>
+                    <span>LinkedIn</span>
+                </button>
+                <button type="button" class="social-btn">
+                    <span class="social-icon">🐦</span>
+                    <span>Twitter</span>
+                </button>
+            </div>
+        </form>
+        
+        <div class="auth-footer">
+            Already have an account? <a href="login.html" class="auth-link">Sign in</a>
+        </div>
+    </main>
+    <script type="module" src="signup.js"></script>
+</body>
+</html>

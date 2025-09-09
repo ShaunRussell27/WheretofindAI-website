@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WheretofindAI.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- AI Background Elements -->
+    <div class="ai-background">
+        <div class="circuit-lines"></div>
+        <div class="floating-ai-elements" id="aiElements"></div>
+    </div>
+    
+    <!-- Modern Header with Sign-up -->
+    <header class="header-container">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <div class="logo-icon">AI</div>
+                <div class="logo-text">WhereToFindAi.com</div>
+            </a>
+            
+            <nav class="nav-links">
+               <a href="#categories" class="nav-link">Explore</a>
+                <a href="price.html" class="nav-link">Pricing</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+            </nav>
+            
+            <div class="auth-buttons">
+                <a href="login.html" class="login-btn" role="button">Log in</a>
+                <a href="signup.html" class="signup-btn" role="button">Sign up free</a>
+            </div>
+            
+            <button class="menu-toggle">☰</button>
+        </div>
+    </header>
+    
+    <section class="hero-section">
+        <div class="ai-chips" id="aiChips"></div>
+        
+        <h1 class="hero-title">Discover the Power of Specialized AI</h1>
+        <p class="hero-subtitle">Access hundreds of AI models across different categories to enhance your workflow, boost creativity, and solve complex problems with cutting-edge technology.</p>
+        
+        <div class="cta-buttons">
+            <button class="primary-cta" onclick="window.location.href='signup.html'">Get Started - It's Free</button>
+            <button class="secondary-cta" onclick="document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });">Explore Models</button>
+        </div>
+    </section>
+    
+    <!-- AI Websites Dropdown -->
+    <div class="ai-selector">
+
+        <ul class="ai-dropdown-menu" id="aiDropdownMenu" role="listbox" aria-hidden="true">
+            <li role="option" data-website="OpenAI" data-desc="AI research and deployment." data-url="https://openai.com">
+                <img src="https://logo.clearbit.com/openai.com" alt="" class="ai-logo"> OpenAI
+            </li>
+            <li role="option" data-website="DeepMind" data-desc="Advanced AI solutions by Google." data-url="https://deepmind.com">
+                <img src="https://logo.clearbit.com/deepmind.com" alt="" class="ai-logo"> DeepMind
+            </li>
+            <li role="option" data-website="Hugging Face" data-desc="Open-source AI models and datasets." data-url="https://huggingface.co">
+                <img src="https://logo.clearbit.com/huggingface.co" alt="" class="ai-logo"> Hugging Face
+            </li>
+            <li role="option" data-website="Anthropic" data-desc="AI research and safety-focused models." data-url="https://anthropic.com">
+                <img src="https://logo.clearbit.com/anthropic.com" alt="" class="ai-logo"> Anthropic
+            </li>
+            <li role="option" data-website="Midjourney" data-desc="AI-powered image generation." data-url="https://www.midjourney.com">
+                <img src="https://logo.clearbit.com/midjourney.com" alt="" class="ai-logo"> Midjourney
+            </li>
+        </ul>
+
+        <div class="ai-popup-overlay" id="aiPopupOverlay" aria-hidden="true">
+            <div class="ai-popup" role="dialog">
+                <button class="close-popup" id="closePopup" aria-label="Close">&times;</button>
+                <img src="" alt="" class="popup-logo">
+                <h3 class="popup-title"></h3>
+                <p class="popup-desc"></p>
+                <a href="#" target="_blank" class="popup-link">Visit Site →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories Grid -->
+    <main id="categories">
+        <div class="categories-grid">
+            <!-- Education Category -->
+            <div class="category-card">
+                <div class="category-header" onclick="toggleCategory(this.parentNode)">
+                    <div class="category-icon">📚</div>
+                    <div class="category-info">
+                        <h3>Education AI</h3>
+                        <p>Tools for learning and research</p>
+                    </div>
+                    <span class="model-count">8 models</span>
+                </div>
+                
+                <div class="models-container">
+                    <div class="models-list">
+                        <div class="model-card">
+                            <div class="model-thumbnail">
+                                <div style="background: #4361ee; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">E</div>
+                            </div>
+                            <div class="model-info">
+                                <h4>EduAssistant</h4>
+                                <p>Personalized learning companion</p>
+                            </div>
+                            <button class="try-btn">Try Now</button>
+                        </div>
+                        
+                        <div class="model-card">
+                            <div class="model-thumbnail">
+                                <div style="background: #3a0ca3; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">R</div>
+                            </div>
+                            <div class="model-info">
+                                <h4>Research Summarizer</h4>
+                                <p>Condenses academic papers</p>
+                            </div>
+                            <button class="try-btn">Try Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Creation Category -->
+            <div class="category-card">
+                <div class="category-header" onclick="toggleCategory(this.parentNode)">
+                    <div class="category-icon">🎨</div>
+                    <div class="category-info">
+                        <h3>Content Creation</h3>
+                        <p>AI for creators and marketers</p>
+                    </div>
+                    <span class="model-count">12 models</span>
+                </div>
+                
+                <div class="models-container">
+                    <div class="models-list">
+                        <div class="model-card">
+                            <div class="model-thumbnail">
+                                <div style="background: #f72585; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">C</div>
+                            </div>
+                            <div class="model-info">
+                                <h4>CopyGenius</h4>
+                                <p>SEO-optimized content writer</p>
+                            </div>
+                            <button class="try-btn">Try Now</button>
+                        </div>
+                        
+                        <div class="model-card">
+                            <div class="model-thumbnail">
+                                <div style="background: #4cc9f0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">V</div>
+                            </div>
+                            <div class="model-info">
+                                <h4>VideoScript AI</h4>
+                                <p>Engaging video scripts</p>
+                            </div>
+                            <button class="try-btn">Try Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Productivity Category -->
+            <div class="category-card">
+                <div class="category-header" onclick="toggleCategory(this.parentNode)">
+                    <div class="category-icon">⚡</div>
+                    <div class="category-info">
+                        <h3>Productivity</h3>
+                        <p>Work smarter, not harder</p>
+                    </div>
+                    <span class="model-count">6 models</span>
+                </div>
+                
+                <div class="models-container">
+                    <div class="models-list">
+                        <div class="model-card">
+                            <div class="model-thumbnail">
+                                <div style="background: #7209b7; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">T</div>
+                            </div>
+                            <div class="model-info">
+                                <h4>TaskMaster</h4>
+                                <p>Intelligent task prioritization</p>
+                            </div>
+                            <button class="try-btn">Try Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Coding Category -->
+            <div class="category-card">
+                <div class="category-header" onclick="toggleCategory(this.parentNode)">
+                    <div class="category-icon">💻</div>
+                    <div class="category-info">
+                        <h3>Coding</h3>
+                        <p>Making coding as easy as ever</p>
+                    </div>
+                    <span class="model-count">6 models</span>
+                </div>
+                
+                <div class="models-container">
+                    <div class="models-list">
+                        <div class="model-card">
+                            <div class="model-thumbnail">
+                                <div style="background: #4895ef; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">C</div>
+                            </div>
+                            <div class="model-info">
+                                <h4>CodePilot</h4>
+                                <p>AI pair programmer</p>
+                            </div>
+                            <button class="try-btn">Try Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finance Category -->
+            <div class="category-card">
+                <div class="category-header" onclick="toggleCategory(this.parentNode)">
+                    <div class="category-icon">💰</div>
+                    <div class="category-info">
+                        <h3>Finance</h3>
+                        <p>Grow your wealth</p>
+                    </div>
+                    <span class="model-count">5 models</span>
+                </div>
+                
+                <div class="models-container">
+                    <div class="models-list">
+                        <div class="model-card">
+                            <div class="model-thumbnail">
+                                <div style="background: #4cc9f0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">F</div>
+                            </div>
+                            <div class="model-info">
+                                <h4>FinWise</h4>
+                                <p>Personal finance advisor</p>
+                            </div>
+                            <button class="try-btn">Try Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Healthcare Category -->
+            <div class="category-card">
+                <div class="category-header" onclick="toggleCategory(this.parentNode)">
+                    <div class="category-icon">🏥</div>
+                    <div class="category-info">
+                        <h3>Healthcare</h3>
+                        <p>Medical diagnosis and support</p>
+                    </div>
+                    <span class="model-count">5 models</span>
+                </div>
+                
+                <div class="models-container">
+                    <div class="models-list">
+                        <div class="model-card">
+                            <div class="model-thumbnail">
+                                <div style="background: #4895ef; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">D</div>
+                            </div>
+                            <div class="model-info">
+                                <h4>DermScan</h4>
+                                <p>Skin condition analysis</p>
+                            </div>
+                            <button class="try-btn">Try Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div class="ai-builder-container">
+        <div class="ai-builder-icon">⚙️</div>
+        <h2 class="ai-builder-title">Make Your Own AI</h2>
+        <p class="ai-builder-description">
+            Create custom AI workflows tailored to your specific needs. 
+            Connect different models and services to build powerful automations.
+        </p>
+        <a href="https://n8n.io" target="_blank" class="n8n-link">Build with n8n</a>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>🌐 Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">AI Categories</a></li>
+                    <li><a href="#">Top Tools & Platforms</a></li>
+                    <li><a href="#">AI News & Trends</a></li>
+                    <li><a href="#">Getting Started Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h2>📚 Resources</h2>
+                <ul>
+                    <li><a href="#">AI Learning Paths</a></li>
+                    <li><a href="#">Tutorials & Demos</a></li>
+                    <li><a href="#">Glossary of AI Terms</a></li>
+                    <li><a href="#">Community Forums</a></li>
+                    <li><a href="#">Events & Webinars</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h2>🧠 About</h2>
+                <ul>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Meet the Team</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Submit an AI Tool</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h2>🔒 Legal</h2>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Cookie Settings</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h2>🌟 Stay Updated</h2>
+                <p>Get the latest in AI tools, trends, and tutorials.</p>
+                <form>
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Explore AI. All rights reserved.</p>
+        </div>
+    </footer>
+    <script type="module" src="action.js"></script>
+</body>
+</html>
