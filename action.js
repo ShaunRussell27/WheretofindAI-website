@@ -8,7 +8,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/fireba
 import { getAuth, onAuthStateChanged,signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
 const firebaseConfig = {
-  //apiKey: "AIzaSyBxh0T0Kan7qvQyFVzpu0p-zWHwETjIzSY",
+  apiKey: "AIzaSyBxh0T0Kan7qvQyFVzpu0p-zWHwETjIzSY",
   authDomain: "wheretofindai.firebaseapp.com",
   projectId: "wheretofindai",
   storageBucket: "wheretofindai.appspot.com",

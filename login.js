@@ -3,7 +3,7 @@ import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopu
 
 // Your Firebase config
 const firebaseConfig = {
-//  apiKey: "AIzaSyBxh0T0Kan7qvQyFVzpu0p-zWHwETjIzSY",
+  apiKey: "AIzaSyBxh0T0Kan7qvQyFVzpu0p-zWHwETjIzSY",
   authDomain: "wheretofindai.firebaseapp.com",
   projectId: "wheretofindai",
   storageBucket: "wheretofindai.appspot.com",
